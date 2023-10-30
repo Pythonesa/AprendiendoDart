@@ -6,6 +6,17 @@ void main(List<String> args) {
   saludar3("Kaly");
   saludar4(null);
   saludar5(name: 'Kaly');
+
+  //Lambda power:
+  List<int> listado = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+  Iterable<int> nuevoListadoBasico = listado.where((number) {
+    return number % 2 == 0;
+  });
+  print(nuevoListadoBasico);
+
+  Iterable<int> nuevoListadoLambda = listado.where((number) => number % 2 == 0);
+  print(nuevoListadoLambda);
 }
 
 //argumentos obligatorios posicionales:
